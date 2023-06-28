@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:textStyle="bold"
+                android:textSize="@dimen/textPrimarySize"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_user" />
+            <EditText
+                android:id="@+id/edtUser"
+                android:textSize="@dimen/editTextPrimarySize"
+                android:hint="@string/input_user"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:layout_height="48dp"
+                android:autofillHints="emailAddress"
+                android:inputType="textEmailAddress"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/textPrimarySize"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_pass" />
+            <EditText
+                android:id="@+id/edtPass"
+                android:textSize="@dimen/editTextPrimarySize"
+                android:hint="@string/input_pass"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:layout_height="48dp"
+                android:autofillHints="password"
+                android:inputType="textPassword"/>
+            <LinearLayout
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/link_login"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textAlignment="textStart"
+                    android:id="@+id/txvLinkA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/link_registrar" />
+
+                <TextView
+                    android:textColor="@color/link_login"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/txvLinkB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/link_recuperar" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="@string/btn_login"
+                android:textStyle="bold"
+                android:textColor="@color/link_login"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

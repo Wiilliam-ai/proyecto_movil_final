@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_app">#F8F6F4</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--  Login - R - Rec -->
+    <color name="link_login">#1B6B93</color>
+
+    <color name="text_dash_primary">#1D267D</color>
+</resources>

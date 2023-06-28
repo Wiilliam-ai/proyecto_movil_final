@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ProyectoAndroidUgel</string>
+    <!--  Login - Recuperar Cuenta - Registrar Cuenta -->
+    <string name="label_user">USUARIO</string>
+    <string name="input_user">Ingrese su usuario</string>
+    <string name="label_pass">CLAVE</string>
+    <string name="input_pass">Ingrese su password</string>
+    <string name="link_registrar">Registre su cuenta</string>
+    <string name="link_recuperar">Recuperar cuenta</string>
+    <string name="btn_login">Inicar Sesion</string>
+    <string name="label_recuperar_email">Email</string>
+    <string name="input_recuperar">Ingrese su correo educativo</string>
+
+
+</resources>
