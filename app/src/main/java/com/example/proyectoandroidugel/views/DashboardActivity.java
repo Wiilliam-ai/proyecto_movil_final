@@ -23,6 +23,7 @@ public class DashboardActivity extends AppCompatActivity {
     private CardView btnIrNoticias,btnIrResoluciones,btnIrContratos,btnIrSolicitudes;
     private TextView txvName,txvDni,txvCodigoM,txvCondicion,txvCargo;
     DocenteService docenteService;
+    private String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,15 +40,8 @@ public class DashboardActivity extends AppCompatActivity {
         llamarDatoDocente();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        llamarDatoDocente();
-
-    }
-
     private void llamarDatoDocente(){
-        docenteService.litarDocentes(2,new DocenteService.DocenteCallback() {
+        docenteService.litarDocentes(token,new DocenteService.DocenteCallback() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onDocenteLoaded(Docente docente) {
@@ -79,6 +73,11 @@ public class DashboardActivity extends AppCompatActivity {
         txvCodigoM = findViewById(R.id.txvCodigoM);
         txvCondicion = findViewById(R.id.txvCondicion);
         txvCargo = findViewById(R.id.txvCargo);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            token = intent.getStringExtra("TOKEN");
+        }
     }
     @SuppressLint("NonConstantResourceId")
     private void navegarPantalla(View v){
@@ -86,15 +85,19 @@ public class DashboardActivity extends AppCompatActivity {
         int id = v.getId();
         if (id == R.id.btnIrNoticia){
             intent = new Intent(this, NoticiasActivity.class);
+            intent.putExtra("TOKEN",token);
             startActivity(intent);
         } else if (id == R.id.btnIrResolicion) {
             intent = new Intent(this, ResolucionesActivity.class);
+            intent.putExtra("TOKEN",token);
             startActivity(intent);
         } else if (id == R.id.btnIrContrato) {
             intent = new Intent(this, ContratosActivity.class);
+            intent.putExtra("TOKEN",token);
             startActivity(intent);
         } else if (id == R.id.btnIrSolicitud) {
             intent = new Intent(this, SolicitudesActivity.class);
+            intent.putExtra("TOKEN",token);
             startActivity(intent);
         }
     }

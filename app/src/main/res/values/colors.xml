@@ -7,4 +7,8 @@
     <color name="link_login">#1B6B93</color>
 
     <color name="text_dash_primary">#1D267D</color>
+    <!--  Estados -->
+    <color name="c_proceso">#9DB2BF</color>
+    <color name="c_visto">#F2BE22</color>
+    <color name="c_completado">#68B984</color>
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="lista_resoluciones">
-        <item>Seleccione</item>
-        <item>Primera A</item>
-        <item>Segunda B</item>
-        <item>Tercera C</item>
+        <item>- Seleccione -</item>
+        <item>Contrato</item>
+        <item>Nombramiento</item>
+        <item>Comisión</item>
+        <item>CTS</item>
     </string-array>
 </resources>

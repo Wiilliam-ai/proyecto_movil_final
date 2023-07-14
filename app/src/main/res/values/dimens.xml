@@ -2,4 +2,5 @@
 <resources>
     <dimen name="textPrimarySize">20sp</dimen>
     <dimen name="editTextPrimarySize">20sp</dimen>
+    <dimen name="titulo_dash">30sp</dimen>
 </resources>

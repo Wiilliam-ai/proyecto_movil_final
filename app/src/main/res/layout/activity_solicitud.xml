@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".views.client.SolicitudActivity">
+
+    <TextView
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:text="REALIZA TU SOLICITUD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/textPrimarySize"
+        android:textColor="@color/link_login"
+        android:text="Selecciona el tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/spnTipo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/lista_resoluciones" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/textPrimarySize"
+        android:textColor="@color/link_login"
+        android:text="Describa el motivo de solicitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edtMotivo"
+        android:padding="10dp"
+        android:hint="Ingrese el motivo"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:autofillHints=""
+        android:inputType="text" />
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_marginTop="10dp"
+        android:text="Enviar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -2,21 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/bg_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="10dp"
-    tools:context=".views.client.ResolucionesActivity">
+    android:padding="10dp"
+    tools:context=".views.client.EnviarSolicitudActivity">
 
     <TextView
-        android:id="@+id/txvTituloRes"
+        android:id="@+id/textView111"
         android:background="#000"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TUS RESOLUCIONES"
+        android:text="REALIZA TU SOLICITUD"
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -25,17 +24,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:layout_marginVertical="10dp"
-        android:background="#FFF"
-        android:layout_width="150dp"
-        android:paddingHorizontal="10dp"
-        android:entries="@array/lista_resoluciones"
-        android:layout_height="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvTituloRes" />
     <Button
-        android:id="@+id/btnR111"
+        android:id="@+id/button"
         style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
@@ -44,14 +34,27 @@
         android:layout_marginVertical="10dp"
         app:icon="@drawable/baseline_keyboard_backspace_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvTituloRes" />
+        app:layout_constraintTop_toBottomOf="@+id/textView111" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvResoluciones"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnR111" />
+        android:layout_marginTop="10dp"
+        android:text="Seleccione el documento"
+        android:textSize="@dimen/textPrimarySize"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="10dp" />
 
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/lista_resoluciones"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

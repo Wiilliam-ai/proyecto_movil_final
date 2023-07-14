@@ -1,10 +1,13 @@
 package com.example.proyectoandroidugel.layouts;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,9 +35,17 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.View
         return new ViewHolder(view);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull SolicitudAdapter.ViewHolder holder, int position) {
-
+        String nombre = "TIPO: " + solicitudes.get(position).getNombre();
+        String codigo = "CODIGO: " + solicitudes.get(position).getCodigo();
+        String fecha = "FECHA: " + solicitudes.get(position).getFecha();
+        String estado = solicitudes.get(position).getEstado();
+        holder.txvSolicitudU.setText(nombre);
+        holder.txvCodigoSU.setText(codigo);
+        holder.txvFechaU.setText(fecha);
+        holder.txvEstadoU.setText(estado);
     }
 
     @Override
@@ -43,8 +54,13 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txvCodigoSU,txvSolicitudU,txvFechaU,txvEstadoU;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            txvSolicitudU = itemView.findViewById(R.id.txvTipoS);
+            txvCodigoSU = itemView.findViewById(R.id.txvCodigoS);
+            txvFechaU = itemView.findViewById(R.id.txvFechaS);
+            txvEstadoU = itemView.findViewById(R.id.txvEstadoS);
         }
     }
 }
